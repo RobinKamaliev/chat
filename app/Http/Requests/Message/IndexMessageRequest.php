@@ -49,4 +49,14 @@ final class IndexMessageRequest extends FormRequest
             ->setChatId((int)$this->route('chatId'))
             ->setUserId(auth()->id());
     }
+
+    public function bodyParameters(): array
+    {
+        return [
+            'chatId' => [
+                'type' => 'integer',
+                'description' => 'ID чата, для которого нужно получить сообщения',
+            ]
+        ];
+    }
 }

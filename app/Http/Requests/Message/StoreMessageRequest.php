@@ -53,4 +53,18 @@ final class StoreMessageRequest extends FormRequest
             ->setMessage($this->input('message'))
             ->setUserId(auth()->id());
     }
+
+    public function bodyParameters(): array
+    {
+        return [
+            'message' => [
+                'type' => 'string',
+                'description' => 'Текст сообщения',
+            ],
+            'chatId' => [
+                'type' => 'integer',
+                'description' => 'ID чата, в который отправляется сообщение',
+            ]
+        ];
+    }
 }
