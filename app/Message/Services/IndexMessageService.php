@@ -16,8 +16,7 @@ final readonly class IndexMessageService
     public function __construct(
         private MessageRepositoryInterface $messageRepository,
         private ChatRepositoryInterface    $chatRepository,
-    )
-    {
+    ) {
     }
 
     public function run(IndexMessageDto $indexMessageDto): Collection

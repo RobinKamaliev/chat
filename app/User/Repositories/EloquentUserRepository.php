@@ -31,7 +31,8 @@ final class EloquentUserRepository implements UserRepositoryInterface
     {
         $user = User::query()
             ->where(
-                'email', $loginUserDto->getEmail()
+                'email',
+                $loginUserDto->getEmail()
             )
             ->first();
 

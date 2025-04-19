@@ -18,8 +18,7 @@ final readonly class AddUserInChatService
     public function __construct(
         private ChatRepositoryInterface     $chatRepository,
         private ChatUserRepositoryInterface $chatUserRepository,
-    )
-    {
+    ) {
     }
 
     /**

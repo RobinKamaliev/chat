@@ -94,7 +94,8 @@ final class MessageController extends Controller
                 $service->run(
                     $storeMessageRequest->toDto()
                 )
-            ), Response::HTTP_CREATED
+            ),
+            Response::HTTP_CREATED
         );
     }
 }

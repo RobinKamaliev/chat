@@ -24,7 +24,8 @@ final class AuthController extends Controller
                 $createUserService->run(
                     $storeUserRequest->toDto()
                 )
-            ), Response::HTTP_CREATED
+            ),
+            Response::HTTP_CREATED
         );
     }
 
