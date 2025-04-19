@@ -6,6 +6,7 @@ namespace App\Chat\Models;
 
 use App\Message\Models\Message;
 use App\User\Models\User;
+use Database\Factories\ChatFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -19,6 +20,11 @@ final class Chat extends Model
         'id',
         'name',
     ];
+
+    protected static function newFactory(): ChatFactory
+    {
+        return ChatFactory::new();
+    }
 
     public function users(): BelongsToMany
     {

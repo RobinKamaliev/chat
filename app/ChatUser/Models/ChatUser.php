@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\ChatUser\Models;
 
+use Database\Factories\ChatUserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,4 +17,9 @@ final class ChatUser extends Model
         'chat_id',
         'user_id',
     ];
+
+    protected static function newFactory(): ChatUserFactory
+    {
+        return ChatUserFactory::new();
+    }
 }
