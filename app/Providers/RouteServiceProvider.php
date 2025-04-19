@@ -9,9 +9,13 @@ class RouteServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        Route::middleware('api')
-            ->prefix('api')
-            ->group(base_path('routes/api.php'));
+        foreach (glob(base_path('routes/api/v*/*')) as $file) {
+            $version = basename(dirname($file));
+
+            Route::middleware('api')
+                ->prefix("api/{$version}")
+                ->group($file);
+        }
 
         Route::middleware('web')
             ->group(base_path('routes/web.php'));
