@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Chat\Repositories;
 
 use App\Chat\Dto\CreateChatDto;
+use App\Chat\Exceptions\ChatNotFoundException;
 use App\Chat\Models\Chat;
 use App\Message\Dto\IndexMessageDto;
 use Illuminate\Support\Collection;
@@ -35,6 +36,9 @@ final class EloquentChatRepository implements ChatRepositoryInterface
             ]);
     }
 
+    /**
+     * @throws ChatNotFoundException
+     */
     public function findByUserIdAndChatId(IndexMessageDto $indexMessageDto): Chat
     {
         $chat = Chat::query()
@@ -42,7 +46,7 @@ final class EloquentChatRepository implements ChatRepositoryInterface
             ->find($indexMessageDto->getChatId());
 
         if (!$chat) {
-            throw new \Exception(); // todo
+            throw new ChatNotFoundException();
         }
 
         return $chat;
