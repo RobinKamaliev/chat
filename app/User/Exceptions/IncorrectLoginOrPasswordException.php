@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\User\Exceptions;
 
-use Exception;
+use App\Exceptions\HttpException;
 use Symfony\Component\HttpFoundation\Response;
 
-final class IncorrectLoginOrPasswordException extends Exception
+final class IncorrectLoginOrPasswordException extends HttpException
 {
     public $message = 'Не верный логин или пароль.';
 

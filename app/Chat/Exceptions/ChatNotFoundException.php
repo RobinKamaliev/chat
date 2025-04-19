@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Chat\Exceptions;
 
-use Exception;
+use App\Exceptions\HttpException;
 use Symfony\Component\HttpFoundation\Response;
 
-final class ChatNotFoundException extends Exception
+final class ChatNotFoundException extends HttpException
 {
     public $message = 'Чат не найден.';
 

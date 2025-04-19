@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\User\Exceptions;
 
-use Exception;
+use App\Exceptions\HttpException;
 use Symfony\Component\HttpFoundation\Response;
 
-final class UserNotAuthorizedException extends Exception
+final class UserNotAuthorizedException extends HttpException
 {
     public $message = 'Пользователь не авторизован.';
 
