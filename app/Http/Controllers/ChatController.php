@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Chat\Exceptions\AddUserInChatException;
-use App\Chat\Services\AddUserInChatService;
-use App\Chat\Services\IndexChatService;
 use App\Http\Requests\Chat\StoreChatRequest;
 use App\Http\Resources\Chat\IndexGhatResource;
 use App\Http\Resources\Chat\StoreChatResource;
-use App\User\Exceptions\UserNotAuthorizedException;
+use App\Modules\Chat\Exceptions\AddUserInChatException;
+use App\Modules\Chat\Services\AddUserInChatService;
+use App\Modules\Chat\Services\IndexChatService;
+use App\Modules\User\Exceptions\UserNotAuthorizedException;
 use Exception;
 use Illuminate\Http\JsonResponse;
 

@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use App\Chat\Exceptions\ChatNotFoundException;
-use App\Chat\Models\Chat;
-use App\ChatUser\Models\ChatUser;
-use App\Message\Models\Message;
-use App\User\Models\User;
+use App\Modules\Chat\Exceptions\ChatNotFoundException;
+use App\Modules\Chat\Models\Chat;
+use App\Modules\ChatUser\Models\ChatUser;
+use App\Modules\Message\Models\Message;
+use App\Modules\User\Models\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 

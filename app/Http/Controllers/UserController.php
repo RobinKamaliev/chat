@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Http\Resources\User\GetUserResource;
-use App\User\Services\Auth\GetUserService;
+use App\Modules\User\Services\Auth\GetUserService;
 use Illuminate\Http\JsonResponse;
 
 final class UserController extends Controller

@@ -8,8 +8,8 @@ use App\Http\Requests\Message\IndexMessageRequest;
 use App\Http\Requests\Message\StoreMessageRequest;
 use App\Http\Resources\Message\IndexMessageResource;
 use App\Http\Resources\Message\StoreMessageResource;
-use App\Message\Services\CreateMessageService;
-use App\Message\Services\IndexMessageService;
+use App\Modules\Message\Services\CreateMessageService;
+use App\Modules\Message\Services\IndexMessageService;
 use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 

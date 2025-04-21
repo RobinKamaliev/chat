@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Chat\Models\Chat;
+use App\Modules\Chat\Models\Chat;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ChatFactory extends Factory

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\User;
 
-use App\User\Dto\LoginUserDto;
+use App\Modules\User\Dto\LoginUserDto;
 use Illuminate\Foundation\Http\FormRequest;
 
 final class LoginUserRequest extends FormRequest
