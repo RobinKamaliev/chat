@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\User;
 
-use App\User\Dto\CreateUserDto;
+use App\Modules\User\Dto\CreateUserDto;
 use Illuminate\Foundation\Http\FormRequest;
 
 final class StoreUserRequest extends FormRequest

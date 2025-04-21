@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\Message;
 
-use App\Message\Dto\CreateMessageDto;
+use App\Modules\Message\Dto\CreateMessageDto;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 

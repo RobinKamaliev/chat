@@ -8,10 +8,10 @@ use App\Http\Requests\User\LoginUserRequest;
 use App\Http\Requests\User\StoreUserRequest;
 use App\Http\Resources\User\CreateUserResource;
 use App\Http\Resources\User\LoginUserResource;
-use App\User\Exceptions\IncorrectLoginOrPasswordException;
-use App\User\Exceptions\UserNotFoundException;
-use App\User\Services\Auth\CreateUserService;
-use App\User\Services\Auth\LoginUserService;
+use App\Modules\User\Exceptions\IncorrectLoginOrPasswordException;
+use App\Modules\User\Exceptions\UserNotFoundException;
+use App\Modules\User\Services\Auth\CreateUserService;
+use App\Modules\User\Services\Auth\LoginUserService;
 use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
